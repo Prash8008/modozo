@@ -1,0 +1,5 @@
+/* Mascot sprite, see js/mascot.js */
+.mc{position:relative;display:block;flex:none;width:var(--mc-size,120px);height:var(--mc-size,120px);padding:0;border:0;background:none;cursor:pointer;user-select:none;-webkit-tap-highlight-color:transparent}
+.mc-sq{position:relative;display:block;width:100%;height:100%;transform-origin:50% 78%}
+.mc-d,.mc-r{position:absolute;inset:0;background-size:300% 300%;background-repeat:no-repeat}
+.mc-r{opacity:0}

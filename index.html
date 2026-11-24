@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Modozo | The Fashion Operating System</title>
+<meta name="description" content="Modozo is the fashion product lifecycle management platform that connects product data, teams and manufacturers, from tech pack to production to dispatch.">
+<meta name="theme-color" content="#181818">
+<meta property="og:title" content="Modozo | The Fashion Operating System">
+<meta property="og:description" content="From tech pack to production, Modozo connects your product data, teams and manufacturers on one platform. Connected. Visible. Faster.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="public/img/factory-floor.webp">
+<meta property="og:image:alt" content="Modozo style workspace over a garment factory floor">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Modozo | The Fashion Operating System">
+<meta name="twitter:image" content="public/img/factory-floor.webp">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="public/favicon-32.png">
+<link rel="apple-touch-icon" href="public/apple-touch-icon.png">
+<link rel="preload" href="public/fonts/geist-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="css/base.css?v=14">
+<link rel="stylesheet" href="css/mocks.css?v=14">
+<link rel="stylesheet" href="css/hero-film.css?v=15">
+<link rel="stylesheet" href="css/mascot.css?v=1">
+<link rel="stylesheet" href="css/assistant.css?v=2">
+<script type="importmap">{"imports":{"three":"./public/vendor/three/three.module.min.js","three/addons/":"./public/vendor/three/addons/"}}</script>
+<script>document.documentElement.classList.add('js')</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Modozo","url":"https://www.modozo.fashion","email":"contact@modozo.fashion","telephone":"+91 9980924244","address":{"@type":"PostalAddress","streetAddress":"4th Floor, Sanali Spazio, Inorbit Mall Rd, Madhapur","addressLocality":"Hyderabad","addressRegion":"Telangana","postalCode":"500081","addressCountry":"IN"}}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is Modozo?", "acceptedAnswer": {"@type": "Answer", "text": "Modozo is a fashion product lifecycle management platform. It brings tech packs, BOMs, samples, approvals, vendor communication and production tracking into one workspace, so brands and manufacturers work from the same current information."}}, {"@type": "Question", "name": "How does Modozo reduce manual work?", "acceptedAnswer": {"@type": "Answer", "text": "Structured tech packs replace scattered files, and updates, approvals and comments are recorded against the style. Tools powered by AI, such as Techpack PDF to Excel, remove retyping, so teams spend less time copying data between documents and chasing status."}}, {"@type": "Question", "name": "Can I collaborate with vendors?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Invite vendors into a shared workspace where they can access the tech packs, samples and orders you choose, comment in real time and confirm costs, without exchanging files over email or chat."}}, {"@type": "Question", "name": "Does Modozo support sample and production tracking?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Every sample round is tracked against its specification, and production orders are followed through fabric, cutting, stitching, QA check and dispatch, with measurement, workmanship, colour and packaging checks recorded."}}, {"@type": "Question", "name": "How does Modozo keep everyone aligned during product development?", "acceptedAnswer": {"@type": "Answer", "text": "Every team works from a single versioned record per style. Changes, comments and approvals update for all roles, including brand, design, fit, sourcing, vendor and QA, so nobody builds from an outdated file."}}, {"@type": "Question", "name": "Is my product data secure?", "acceptedAnswer": {"@type": "Answer", "text": "Product data lives in a central workspace with access set by role, so each team member and vendor sees only the styles and information shared with them. For details on hosting and compliance, contact the Modozo team."}}, {"@type": "Question", "name": "Who is Modozo built for?", "acceptedAnswer": {"@type": "Answer", "text": "Apparel brands, manufacturers and sourcing teams that manage products from concept through production and delivery, together with the design, fit, sourcing, vendor and QA teams who work on them."}}]}</script>
+</head>
+<body id="top">
+<div class="tribar" aria-hidden="true"><i></i><i></i><i></i></div>
+
+<!-- icon + artwork sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-arrow" viewBox="0 0 256 256"><path d="M221.66,133.66l-72,72a8,8,0,0,1-11.32-11.32L196.69,136H40a8,8,0,0,1,0-16H196.69L138.34,61.66a8,8,0,0,1,11.32-11.32l72,72A8,8,0,0,1,221.66,133.66Z"/></symbol>
+  <symbol id="i-check" viewBox="0 0 256 256"><path d="M229.66,77.66l-128,128a8,8,0,0,1-11.32,0l-56-56a8,8,0,0,1,11.32-11.32L96,188.69,218.34,66.34a8,8,0,0,1,11.32,11.32Z"/></symbol>
+  <symbol id="i-x" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 256 256"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></symbol>
+  <symbol id="i-file" viewBox="0 0 256 256"><path d="M213.66,82.34l-56-56A8,8,0,0,0,152,24H56A16,16,0,0,0,40,40V216a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V88A8,8,0,0,0,213.66,82.34ZM160,51.31,188.69,80H160ZM200,216H56V40h88V88a8,8,0,0,0,8,8h48V216Zm-32-80a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,136Zm0,32a8,8,0,0,1-8,8H96a8,8,0,0,1,0-16h64A8,8,0,0,1,168,168Z"/></symbol>
+  <symbol id="i-users" viewBox="0 0 256 256"><path d="M117.25,157.92a60,60,0,1,0-66.5,0A95.83,95.83,0,0,0,3.53,195.63a8,8,0,1,0,13.4,8.74,80,80,0,0,1,134.14,0,8,8,0,0,0,13.4-8.74A95.83,95.83,0,0,0,117.25,157.92ZM40,108a44,44,0,1,1,44,44A44.05,44.05,0,0,1,40,108Zm210.14,98.7a8,8,0,0,1-11.07-2.33A79.83,79.83,0,0,0,172,168a8,8,0,0,1,0-16,44,44,0,1,0-16.34-84.87,8,8,0,1,1-5.94-14.85,60,60,0,0,1,55.53,105.64,95.83,95.83,0,0,1,47.22,37.71A8,8,0,0,1,250.14,206.7Z"/></symbol>
+  <symbol id="i-activity" viewBox="0 0 256 256"><path d="M240,128a8,8,0,0,1-8,8H204.94l-37.78,75.58A8,8,0,0,1,160,216h-.4a8,8,0,0,1-7.08-5.14L95.35,60.76,63.28,131.31A8,8,0,0,1,56,136H24a8,8,0,0,1,0-16H50.85L88.72,36.69a8,8,0,0,1,14.76.46l57.51,151,31.85-63.71A8,8,0,0,1,200,120h32A8,8,0,0,1,240,128Z"/></symbol>
+  <symbol id="i-package" viewBox="0 0 256 256"><path d="M223.68,66.15,135.68,18a15.88,15.88,0,0,0-15.36,0l-88,48.17a16,16,0,0,0-8.32,14v95.64a16,16,0,0,0,8.32,14l88,48.17a15.88,15.88,0,0,0,15.36,0l88-48.17a16,16,0,0,0,8.32-14V80.18A16,16,0,0,0,223.68,66.15ZM128,32l80.34,44-29.77,16.3-80.35-44ZM128,120,47.66,76l33.9-18.56,80.34,44ZM40,90l80,43.78v85.79L40,175.82Zm176,85.78h0l-80,43.79V133.82l32-17.51V152a8,8,0,0,0,16,0V107.55L216,90v85.77Z"/></symbol>
+  <symbol id="i-sparkles" viewBox="0 0 256 256"><path d="M197.58,129.06,146,110l-19-51.62a15.92,15.92,0,0,0-29.88,0L78,110l-51.62,19a15.92,15.92,0,0,0,0,29.88L78,178l19,51.62a15.92,15.92,0,0,0,29.88,0L146,178l51.62-19a15.92,15.92,0,0,0,0-29.88ZM137,164.22a8,8,0,0,0-4.74,4.74L112,223.85,91.78,169A8,8,0,0,0,87,164.22L32.15,144,87,123.78A8,8,0,0,0,91.78,119L112,64.15,132.22,119a8,8,0,0,0,4.74,4.74L191.85,144ZM144,40a8,8,0,0,1,8-8h16V16a8,8,0,0,1,16,0V32h16a8,8,0,0,1,0,16H184V64a8,8,0,0,1-16,0V48H152A8,8,0,0,1,144,40ZM248,88a8,8,0,0,1-8,8h-8v8a8,8,0,0,1-16,0V96h-8a8,8,0,0,1,0-16h8V72a8,8,0,0,1,16,0v8h8A8,8,0,0,1,248,88Z"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 256 256"><path d="M230.91,172A8,8,0,0,1,228,182.91l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,36,169.09l92,53.65,92-53.65A8,8,0,0,1,230.91,172ZM220,121.09l-92,53.65L36,121.09A8,8,0,0,0,28,134.91l96,56a8,8,0,0,0,8.06,0l96-56A8,8,0,1,0,220,121.09ZM24,80a8,8,0,0,1,4-6.91l96-56a8,8,0,0,1,8.06,0l96,56a8,8,0,0,1,0,13.82l-96,56a8,8,0,0,1-8.06,0l-96-56A8,8,0,0,1,24,80Zm23.88,0L128,126.74,208.12,80,128,33.26Z"/></symbol>
+  <symbol id="i-grid" viewBox="0 0 256 256"><path d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 256 256"><path d="M224,48H32a8,8,0,0,0-8,8V192a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V56A8,8,0,0,0,224,48ZM203.43,64,128,133.15,52.57,64ZM216,192H40V74.19l82.59,75.71a8,8,0,0,0,10.82,0L216,74.19V192Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 256 256"><path d="M222.37,158.46l-47.11-21.11-.13-.06a16,16,0,0,0-15.17,1.4,8.12,8.12,0,0,0-.75.56L134.87,160c-15.42-7.49-31.34-23.29-38.83-38.51l20.78-24.71c.2-.25.39-.5.57-.77a16,16,0,0,0,1.32-15.06l0-.12L97.54,33.64a16,16,0,0,0-16.62-9.52A56.26,56.26,0,0,0,32,80c0,79.4,64.6,144,144,144a56.26,56.26,0,0,0,55.88-48.92A16,16,0,0,0,222.37,158.46ZM176,208A128.14,128.14,0,0,1,48,80,40.2,40.2,0,0,1,82.87,40a.61.61,0,0,0,0,.12l21,47L83.2,111.86a6.13,6.13,0,0,0-.57.77,16,16,0,0,0-1,15.7c9.06,18.53,27.73,37.06,46.46,46.11a16,16,0,0,0,15.75-1.14,8.44,8.44,0,0,0,.74-.56L168.89,152l47,21.05h0s.08,0,.11,0A40.21,40.21,0,0,1,176,208Z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 256 256"><path d="M128,64a40,40,0,1,0,40,40A40,40,0,0,0,128,64Zm0,64a24,24,0,1,1,24-24A24,24,0,0,1,128,128Zm0-112a88.1,88.1,0,0,0-88,88c0,31.4,14.51,64.68,42,96.25a254.19,254.19,0,0,0,41.45,38.3,8,8,0,0,0,9.18,0A254.19,254.19,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25A88.1,88.1,0,0,0,128,16Zm0,206c-16.53-13-72-60.75-72-118a72,72,0,0,1,144,0C200,161.23,144.53,209,128,222Z"/></symbol>
+  <symbol id="i-msg" viewBox="0 0 256 256"><path d="M128,24A104,104,0,0,0,36.18,176.88L24.83,210.93a16,16,0,0,0,20.24,20.24l34.05-11.35A104,104,0,1,0,128,24Zm0,192a87.87,87.87,0,0,1-44.06-11.81,8,8,0,0,0-6.54-.67L40,216,52.47,178.6a8,8,0,0,0-.66-6.54A88,88,0,1,1,128,216Z"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 256 256"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm64-88a8,8,0,0,1-8,8H128a8,8,0,0,1-8-8V72a8,8,0,0,1,16,0v48h48A8,8,0,0,1,192,128Z"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 256 256"><path d="M225.86,102.82c-3.77-3.94-7.67-8-9.14-11.57-1.36-3.27-1.44-8.69-1.52-13.94-.15-9.76-.31-20.82-8-28.51s-18.75-7.85-28.51-8c-5.25-.08-10.67-.16-13.94-1.52-3.56-1.47-7.63-5.37-11.57-9.14C146.28,23.51,138.44,16,128,16s-18.27,7.51-25.18,14.14c-3.94,3.77-8,7.67-11.57,9.14C88,40.64,82.56,40.72,77.31,40.8c-9.76.15-20.82.31-28.51,8S41,67.55,40.8,77.31c-.08,5.25-.16,10.67-1.52,13.94-1.47,3.56-5.37,7.63-9.14,11.57C23.51,109.72,16,117.56,16,128s7.51,18.27,14.14,25.18c3.77,3.94,7.67,8,9.14,11.57,1.36,3.27,1.44,8.69,1.52,13.94.15,9.76.31,20.82,8,28.51s18.75,7.85,28.51,8c5.25.08,10.67.16,13.94,1.52,3.56,1.47,7.63,5.37,11.57,9.14C109.72,232.49,117.56,240,128,240s18.27-7.51,25.18-14.14c3.94-3.77,8-7.67,11.57-9.14,3.27-1.36,8.69-1.44,13.94-1.52,9.76-.15,20.82-.31,28.51-8s7.85-18.75,8-28.51c.08-5.25.16-10.67,1.52-13.94,1.47-3.56,5.37-7.63,9.14-11.57C232.49,146.28,240,138.44,240,128S232.49,109.73,225.86,102.82Zm-11.55,39.29c-4.79,5-9.75,10.17-12.38,16.52-2.52,6.1-2.63,13.07-2.73,19.82-.1,7-.21,14.33-3.32,17.43s-10.39,3.22-17.43,3.32c-6.75.1-13.72.21-19.82,2.73-6.35,2.63-11.52,7.59-16.52,12.38S132,224,128,224s-9.15-4.92-14.11-9.69-10.17-9.75-16.52-12.38c-6.1-2.52-13.07-2.63-19.82-2.73-7-.1-14.33-.21-17.43-3.32s-3.22-10.39-3.32-17.43c-.1-6.75-.21-13.72-2.73-19.82-2.63-6.35-7.59-11.52-12.38-16.52S32,132,32,128s4.92-9.15,9.69-14.11,9.75-10.17,12.38-16.52c2.52-6.1,2.63-13.07,2.73-19.82.1-7,.21-14.33,3.32-17.43S70.51,56.9,77.55,56.8c6.75-.1,13.72-.21,19.82-2.73,6.35-2.63,11.52-7.59,16.52-12.38S124,32,128,32s9.15,4.92,14.11,9.69,10.17,9.75,16.52,12.38c6.1,2.52,13.07,2.63,19.82,2.73,7,.1,14.33.21,17.43,3.32s3.22,10.39,3.32,17.43c.1,6.75.21,13.72,2.73,19.82,2.63,6.35,7.59,11.52,12.38,16.52S224,124,224,128,219.08,137.15,214.31,142.11ZM173.66,98.34a8,8,0,0,1,0,11.32l-56,56a8,8,0,0,1-11.32,0l-24-24a8,8,0,0,1,11.32-11.32L112,148.69l50.34-50.35A8,8,0,0,1,173.66,98.34Z"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H136v80a8,8,0,0,1-16,0V136H40a8,8,0,0,1,0-16h80V40a8,8,0,0,1,16,0v80h80A8,8,0,0,1,224,128Z"/></symbol>
+  <symbol id="i-send" viewBox="0 0 256 256"><path d="M227.32,28.68a16,16,0,0,0-15.66-4.08l-.15,0L19.57,82.84a16,16,0,0,0-2.49,29.8L102,154l41.3,84.87A15.86,15.86,0,0,0,157.74,248q.69,0,1.38-.06a15.88,15.88,0,0,0,14-11.51l58.2-191.94c0-.05,0-.1,0-.15A16,16,0,0,0,227.32,28.68ZM157.83,231.85l-.05.14,0-.07-40.06-82.3,48-48a8,8,0,0,0-11.31-11.31l-48,48L24.08,98.25l-.07,0,.14,0L216,40Z"/></symbol>
+  <symbol id="i-bar" viewBox="0 0 256 256"><path d="M224,200h-8V40a8,8,0,0,0-8-8H152a8,8,0,0,0-8,8V80H96a8,8,0,0,0-8,8v40H48a8,8,0,0,0-8,8v64H32a8,8,0,0,0,0,16H224a8,8,0,0,0,0-16ZM160,48h40V200H160ZM104,96h40V200H104ZM56,144H88v56H56Z"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 256 256"><path d="M236.8,188.09,149.35,36.22h0a24.76,24.76,0,0,0-42.7,0L19.2,188.09a23.51,23.51,0,0,0,0,23.72A24.35,24.35,0,0,0,40.55,224h174.9a24.35,24.35,0,0,0,21.33-12.19A23.51,23.51,0,0,0,236.8,188.09ZM222.93,203.8a8.5,8.5,0,0,1-7.48,4.2H40.55a8.5,8.5,0,0,1-7.48-4.2,7.59,7.59,0,0,1,0-7.72L120.52,44.21a8.75,8.75,0,0,1,15,0l87.45,151.87A7.59,7.59,0,0,1,222.93,203.8ZM120,144V104a8,8,0,0,1,16,0v40a8,8,0,0,1-16,0Zm20,36a12,12,0,1,1-12-12A12,12,0,0,1,140,180Z"/></symbol>
+  <symbol id="i-upload" viewBox="0 0 256 256"><path d="M224,144v64a8,8,0,0,1-8,8H40a8,8,0,0,1-8-8V144a8,8,0,0,1,16,0v56H208V144a8,8,0,0,1,16,0ZM93.66,77.66,120,51.31V144a8,8,0,0,0,16,0V51.31l26.34,26.35a8,8,0,0,0,11.32-11.32l-40-40a8,8,0,0,0-11.32,0l-40,40A8,8,0,0,0,93.66,77.66Z"/></symbol>
+  <symbol id="i-search" viewBox="0 0 256 256"><path d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"/></symbol>
+
+  <!-- technical flat: zip jacket, front view -->
+  <symbol id="flat" viewBox="0 0 400 440">
+    <g fill="none" stroke-linejoin="round" stroke-linecap="round">
+      <defs>
+        <g id="half">
+          <path d="M96 74C74 98 52 206 33 338L88 350C93 284 101 212 113 160Z" fill="#fff" stroke="#272727" stroke-width="1.5"/>
+          <path d="M38 312 92 322" stroke="#272727" stroke-width="1.2"/>
+          <path d="M47 322C64 218 82 118 100 84" stroke="#a7a296" stroke-width="1" stroke-dasharray="3 2.5"/>
+          <path d="M200 66V396H113C106 330 107 236 113 160 104 132 97 102 96 74L162 46C172 56 188 64 200 66Z" fill="#fff" stroke="#272727" stroke-width="1.5"/>
+          <path d="M200 372H111" stroke="#272727" stroke-width="1.2"/>
+          <path d="M200 380H110.5" stroke="#a7a296" stroke-width="1" stroke-dasharray="3 2.5"/>
+          <path d="M98 100C130 112 168 112 200 106" stroke="#a7a296" stroke-width="1" stroke-dasharray="3 2.5"/>
+          <path d="m124 296 44-8 2 34-43 8z" fill="#fff" stroke="#272727" stroke-width="1.2"/>
+          <path d="m127 304 39-7" stroke="#a7a296" stroke-width="1" stroke-dasharray="3 2.5"/>
+          <path d="m128 176 30-4" stroke="#272727" stroke-width="1.2"/>
+          <path d="M162 46 146 40C140 44 134 50 132 58l40 60 28 12V66C188 64 172 56 162 46Z" fill="#fff" stroke="#272727" stroke-width="1.5"/>
+          <path d="m146 40 10 22 16 56" stroke="#272727" stroke-width="1.2"/>
+          <path d="m137 60 37 52" stroke="#a7a296" stroke-width="1" stroke-dasharray="3 2.5"/>
+          <path d="M197 132V396" stroke="#272727" stroke-width="1.2"/>
+          <circle cx="176" cy="150" r="3.2" fill="#fff" stroke="#272727" stroke-width="1.1"/>
+        </g>
+      </defs>
+      <use href="#half"/>
+      <g transform="translate(400 0) scale(-1 1)"><use href="#half"/></g>
+      <path d="M162 46C178 36 222 36 238 46" stroke="#272727" stroke-width="1.4"/>
+      <path d="M200 132V396" stroke="#272727" stroke-width="1.5"/>
+      <rect x="196.5" y="130" width="7" height="12" rx="2" fill="#fff" stroke="#272727" stroke-width="1.2"/>
+      <path d="M200 142V154" stroke="#272727" stroke-width="1.2"/>
+    </g>
+  </symbol>
+  <!-- measurement callouts A–E -->
+  <symbol id="dims" viewBox="0 0 400 440">
+    <path class="dim" d="M113 208H287M113 202v12M287 202v12"/>
+    <path class="dim" d="M384 46V396M378 46h12M378 396h12"/>
+    <path class="dim" d="M96 24H304M96 18v12M304 18v12"/>
+    <path class="dim" d="M82 70 20 334M76 66l12 8M14 331l12 7"/>
+    <path class="dim" d="M113 414H287M113 408v12M287 408v12"/>
+    <path class="dim faint" d="M96 70V30M304 70V30M113 400v8M287 400v8M290 46h88M290 396h88"/>
+    <g><circle class="bub" cx="200" cy="208" r="9"/><text class="bub-t" x="200" y="208">A</text></g>
+    <g><circle class="bub" cx="384" cy="221" r="9"/><text class="bub-t" x="384" y="221">B</text></g>
+    <g><circle class="bub" cx="200" cy="24" r="9"/><text class="bub-t" x="200" y="24">C</text></g>
+    <g><circle class="bub" cx="51" cy="202" r="9"/><text class="bub-t" x="51" y="202">D</text></g>
+    <g><circle class="bub" cx="200" cy="414" r="9"/><text class="bub-t" x="200" y="414">E</text></g>
+  </symbol>
+</svg>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<span id="top-sentinel" aria-hidden="true"></span>
+<header class="hdr" id="hdr">
+  <div class="hdr-in">
+    <a class="logo" href="#top" aria-label="Modozo home">
+      <img src="public/logo-m-dark.png" alt="" width="31" height="28">
+      <img src="public/logo-word-dark.png" alt="Modozo" width="87" height="12">
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#problem">Problem</a><a href="#platform">Platform</a><a href="#compare">Compare</a><a href="#workflow">Workflow</a><a href="#impact">Impact</a>
+    </nav>
+    <a class="btn btn-primary btn-sm" href="#cta">Book a demo <svg class="i"><use href="#i-arrow"/></svg></a>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="drawer"><i></i><i></i></button>
+  </div>
+</header>
+<nav class="drawer" id="drawer" aria-label="Mobile">
+  <a href="#problem">Problem</a><a href="#platform">Platform</a><a href="#compare">Compare</a><a href="#workflow">Workflow</a><a href="#impact">Impact</a>
+  <a class="btn btn-primary" href="#cta">Book a demo</a>
+</nav>
+
+<main id="main">
+
+<!-- ═════════ HERO ═════════ -->
+<section class="hero hf" aria-label="Fashion Operating System, scroll film">
+  <div class="hf-track" id="hfTrack">
+    <div class="hf-pin" id="hfPin">
+      <div class="hf-canvas" id="hfCanvas" aria-hidden="true"></div>
+      <div class="hf-labels" aria-hidden="true">
+        <span class="hf-dim"><i>A</i>Chest <b>54.0 cm</b></span>
+        <span class="hf-dim"><i>B</i>Length <b>68.5 cm</b></span>
+        <span class="hf-dim"><i>C</i>Neck <b>21.0 cm</b></span>
+        <span class="hf-dim"><i>D</i>Sleeve <b>63.0 cm</b></span>
+        <span class="hf-dim"><i>E</i>Hem <b>52.0 cm</b></span>
+        <span class="hf-bom"><b>Shell</b><small>Ripstop nylon, 2.8 m</small></span>
+        <span class="hf-bom"><b>Insulation</b><small>80 gsm, 0.9 m</small></span>
+        <span class="hf-bom"><b>Lining</b><small>Taffeta, 1.4 m</small></span>
+      </div>
+      <div class="hf-loader" id="hfLoader" aria-hidden="true"><span>----------</span></div>
+      <div class="wrap hf-ui">
+        <div class="hf-top"><span class="hf-mono" id="hfCount">01 / 06</span><span class="hf-mono" id="hfStage">Design</span></div>
+        <div class="hf-copy">
+          <div class="hf-intro" id="hfIntro">
+            <span class="badge"><i class="dots3" aria-hidden="true"><b></b><b></b><b></b></i>Fashion product lifecycle management</span>
+            <h1>The Fashion<br>Operating System</h1>
+            <p class="lead">One record follows every style from the first sketch to the dispatched carton. Scroll to follow one jacket through Modozo.</p>
+            <div class="hero-actions"><a class="btn btn-primary" href="#cta">Book a demo <svg class="i"><use href="#i-arrow"/></svg></a></div>
+          </div>
+          <div class="hf-act" id="hfAct"><h2 id="hfTitle"></h2><p id="hfText"></p></div>
+        </div>
+        <div class="hf-bot">
+          <span class="hf-mono hf-cue">Scroll</span>
+          <ol class="hf-ticks" aria-label="Lifecycle stages">
+            <li><button type="button" aria-label="Design" aria-current="step"></button></li>
+            <li><button type="button" aria-label="Tech pack"></button></li>
+            <li><button type="button" aria-label="Materials"></button></li>
+            <li><button type="button" aria-label="Sample"></button></li>
+            <li><button type="button" aria-label="Production"></button></li>
+            <li><button type="button" aria-label="Dispatch"></button></li>
+          </ol>
+          <span class="hf-mono">Sample data</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="strip" aria-label="Lifecycle coverage">
+  <div class="wrap">
+    <span>One record for every style</span>
+    <ol><li>Tech packs</li><li>BOM</li><li>Samples</li><li>Approvals</li><li>Production</li><li>Dispatch</li></ol>
+  </div>
+</div>
+
+<!-- ═════════ 01 PROBLEM ═════════ -->
+<section class="section paper" id="problem">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow r"><b>01</b> Problem</span>
+      <h2 class="display">Fashion moves fast. Workflows don't.</h2>
+      <p class="lead">Product development still runs across inboxes, chat groups, spreadsheets and PDFs. Every handoff adds delay, and no one holds the full picture.</p>
+    </div>
+    <div class="p-grid">
+      <article class="p-card rv">
+        <div class="p-vis" aria-hidden="true">
+          <div class="mi"><span class="src e">EMAIL</span><b>Re: Fwd: JKT4821 tech pack, latest?</b></div>
+          <div class="mi"><span class="src c">CHAT</span><b>Vendor group</b> · 214 unread</div>
+          <div class="mi"><span class="src x">SHEET</span><b>Costing_v7_final.xlsx</b></div>
+          <div class="mi"><span class="src p">PDF</span><b>Fit comments (2).pdf</b></div>
+        </div>
+        <div class="p-body"><span class="n">01</span><h3>Scattered communication</h3><p>Decisions live in email threads, chat groups and shared drives, so teams and vendors work from different information.</p></div>
+      </article>
+      <article class="p-card rv d1">
+        <div class="p-vis" aria-hidden="true">
+          <div class="mi"><b>Fit sample</b> · Brand<span class="w r">9 days</span></div>
+          <div class="mi"><b>Final sample</b> · QA<span class="w a">5 days</span></div>
+          <div class="mi"><b>Trim approval</b> · no owner<span class="w n">Unassigned</span></div>
+        </div>
+        <div class="p-body"><span class="n">02</span><h3>Delayed approvals</h3><p>Samples wait for approval with no clear owner, no deadline and no record of who decided what.</p></div>
+      </article>
+      <article class="p-card rv d2">
+        <div class="p-vis" aria-hidden="true">
+          <div class="gantt">
+            <div class="lg"><span><i class="k-plan"></i>Planned</span><span><i class="k-act"></i>Actual</span><span><i class="k-late"></i>Delay</span></div>
+            <div class="g"><span>Tech pack</span><div class="track"><i class="plan" style="left:0;width:22%"></i><i class="act" style="left:0;width:26%"></i></div></div>
+            <div class="g"><span>Sampling</span><div class="track"><i class="plan" style="left:22%;width:26%"></i><i class="act" style="left:26%;width:24%"></i><i class="late" style="left:50%;width:18%"></i></div></div>
+            <div class="g"><span>Approval</span><div class="track"><i class="plan" style="left:48%;width:14%"></i><i class="late" style="left:68%;width:14%"></i></div></div>
+            <div class="g"><span>Production</span><div class="track"><i class="plan" style="left:62%;width:38%"></i></div></div>
+          </div>
+        </div>
+        <div class="p-body"><span class="n">03</span><h3>Long time to market</h3><p>Rework and waiting compound at every stage, pushing deliveries past the season window.</p></div>
+      </article>
+      <article class="p-card rv d3">
+        <div class="p-vis" aria-hidden="true">
+          <div class="files">
+            <div class="file"><svg class="i"><use href="#i-file"/></svg>JKT4821_techpack.pdf<small>Mar 04</small></div>
+            <div class="file"><svg class="i"><use href="#i-file"/></svg>JKT4821_techpack_FINAL.pdf<small>Mar 11</small></div>
+            <div class="file"><svg class="i"><use href="#i-file"/></svg>JKT4821_techpack_FINAL_v2.pdf<small>Mar 19</small></div>
+            <div class="file cur"><svg class="i"><use href="#i-file"/></svg>JKT4821_techpack_FINAL_v2 (1).pdf<small>Mar 23</small></div>
+          </div>
+        </div>
+        <div class="p-body"><span class="n">04</span><h3>Techpack mismanagement</h3><p>Multiple versions, missing measurements and mismatched BOMs travel between brand, factory and QA.</p></div>
+      </article>
+    </div>
+    <p class="fine">Illustrations show typical workflow breakdowns with sample data.</p>
+  </div>
+</section>
+
+<!-- ═════════ TAGLINE ═════════ -->
+<section class="tagline-sec" aria-label="Our promise">
+  <div class="wrap"><p class="tagline" id="tagline">One record for every style. One view of every order. Everyone in sync.</p></div>
+</section>
+
+<!-- ═════════ 02 PLATFORM ═════════ -->
+<section class="section flush" id="platform">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow"><b>02</b> Modozo Platform</span>
+      <h2>One operating system for your entire fashion workflow. However complex.</h2>
+      <p class="lead">Five connected modules cover the product from specification to shop floor. Every team, internal or external, works from the same record.</p>
+    </div>
+  </div>
+  <div class="expl" id="expl">
+    <div class="expl-track" id="explTrack">
+      <div class="wrap">
+        <div class="expl-pin" id="explPin">
+          <div class="mods" role="tablist" aria-orientation="vertical" aria-label="Platform modules">
+            <button class="mod" role="tab" data-c="y" id="t1" aria-selected="true" aria-controls="v1"><span class="n">01</span><h3>Smart techpack management</h3><div class="more"><p>Build structured tech packs with specifications, measurements, BOMs and references in one versioned record.</p></div></button>
+            <button class="mod" role="tab" data-c="b" id="t2" aria-selected="false" aria-controls="v2" tabindex="-1"><span class="n">02</span><h3>Centralized collaboration</h3><div class="more"><p>Comments, tasks and approvals sit on the style itself, visible to every team and vendor with the right access.</p></div></button>
+            <button class="mod" role="tab" data-c="r" id="t3" aria-selected="false" aria-controls="v3" tabindex="-1"><span class="n">03</span><h3>Production tracking in real time</h3><div class="more"><p>Follow every order from fabric to dispatch, with measurement, workmanship, colour and packaging checks logged at each stage.</p></div></button>
+            <button class="mod" role="tab" data-c="y" id="t4" aria-selected="false" aria-controls="v4" tabindex="-1"><span class="n">04</span><h3>Vendor management</h3><div class="more"><p>Onboard vendors, share tech packs securely and keep costs, confirmations and performance in one place.</p></div></button>
+            <button class="mod" role="tab" data-c="b" id="t5" aria-selected="false" aria-controls="v5" tabindex="-1"><span class="n">05</span><h3>Tools powered by AI</h3><div class="more"><p>Convert tech pack PDFs to structured data, flag spec mismatches and surface what needs attention next.</p></div></button>
+          </div>
+
+          <div class="view-wrap">
+            <div class="view" id="view" data-c="y">
+
+              <!-- 01 techpack -->
+              <div class="view-slide on" role="tabpanel" id="v1" aria-labelledby="t1">
+                <div class="mock" role="img" aria-label="Tech pack editor showing a garment flat with measurement callouts, points of measure and bill of materials"><div class="app nosb"><section class="mn">
+                  <header class="mn-hd"><div class="crumbs"><span>Styles</span><i>/</i><span>AW26 Outerwear</span><i>/</i><span>JKT4821</span></div>
+                    <div class="right"><span class="ch b dot">Tech pack v3</span><span class="mb"><svg class="i"><use href="#i-upload"/></svg>Techpack PDF to Excel</span><span class="mb p">Share with vendor</span></div></header>
+                  <div class="utabs"><span>Overview</span><span class="on">Specs</span><span>BOM</span><span>Construction</span><span>Versions</span></div>
+                  <div class="g2">
+                    <div class="card"><div class="card-h"><b>Front view</b><span>Callouts A–E</span></div><div class="canvas"><svg viewBox="0 0 400 440"><use href="#flat"/><use href="#dims"/></svg></div></div>
+                    <div class="stack">
+                      <div class="card"><div class="card-h"><b>Points of measure</b><span class="mono sm">Size M · cm</span></div>
+                        <table class="tbl"><thead><tr><th>POM</th><th>Description</th><th class="num">Spec</th><th class="num">Tol</th></tr></thead><tbody>
+                          <tr><td class="k">A</td><td>Chest width</td><td class="num">52.0</td><td class="num">±0.5</td></tr>
+                          <tr><td class="k">B</td><td>Body length</td><td class="num">68.5</td><td class="num">±1.0</td></tr>
+                          <tr><td class="k">C</td><td>Shoulder width</td><td class="num">45.5</td><td class="num">±0.5</td></tr>
+                          <tr><td class="k">D</td><td>Sleeve length</td><td class="num">63.0</td><td class="num">±0.7</td></tr>
+                          <tr><td class="k">E</td><td>Hem opening</td><td class="num">49.0</td><td class="num">±0.5</td></tr>
+                        </tbody></table></div>
+                      <div class="card"><div class="card-h"><b>Bill of materials</b><span>4 items</span></div>
+                        <table class="tbl"><tbody>
+                          <tr><td><b>Shell</b></td><td>60% Leather / 40% PU · 850gsm</td><td class="num">1.82 m</td></tr>
+                          <tr><td><b>Lining</b></td><td>100% Polyester taffeta · 190T</td><td class="num">1.45 m</td></tr>
+                          <tr><td><b>Zipper</b></td><td>Metal, #5 · 62 cm</td><td class="num">1 pc</td></tr>
+                        </tbody></table></div>
+                    </div>
+                  </div>
+                </section></div></div>
+              </div>
+
+              <!-- 02 collaboration -->
+              <div class="view-slide" role="tabpanel" id="v2" aria-labelledby="t2">
+                <div class="mock" role="img" aria-label="Comment thread pinned to a garment detail, with design, fit, vendor and QA messages and an approval card"><div class="app nosb"><section class="mn">
+                  <header class="mn-hd"><div class="crumbs"><span>Styles</span><i>/</i><span>JKT4821</span><i>/</i><span>Comments</span></div>
+                    <div class="right"><span class="live">Live feedback</span><div class="avs"><span class="av">BR</span><span class="av y">DS</span><span class="av r">FT</span><span class="av y">VN</span><span class="av r">QA</span></div></div></header>
+                  <div class="g2 eq">
+                    <div class="card"><div class="card-h"><b>Front pocket · Detail</b><span>3 open pins</span></div>
+                      <div class="canvas"><svg viewBox="0 0 400 440"><use href="#flat"/>
+                        <g><circle class="pin-c" cx="152" cy="304" r="11"/><text class="bub-t lg" x="152" y="304">1</text></g>
+                        <g><circle class="pin-c" cx="62" cy="330" r="11"/><text class="bub-t lg" x="62" y="330">2</text></g>
+                        <g><circle class="pin-y" cx="150" cy="70" r="11"/><text class="pin-t" x="150" y="70">3</text></g>
+                      </svg></div></div>
+                    <div class="stack">
+                      <div class="card"><div class="card-h"><b>Thread</b><span>Updated just now</span></div>
+                        <div class="th">
+                          <div class="msg"><span class="av y">DS</span><div><b>Design</b><time>10:42</time><p><span class="pn">1</span>Moved the pocket 1.5 cm lower to balance the hem band. Updated in v3.</p></div></div>
+                          <div class="msg"><span class="av r">FT</span><div><b>Fit</b><time>10:58</time><p><span class="pn">2</span>Fit sample runs 1 cm long in the sleeve. Please confirm tolerance.</p></div></div>
+                          <div class="msg"><span class="av y">VN</span><div><b>Vendor</b><time>11:06</time><p>Confirmed. Revised sleeve pattern ships with the next sample.</p></div></div>
+                          <div class="msg"><span class="av r">QA</span><div><b>QA</b><time>11:12</time><p><span class="tag">@Vendor</span> please attach the measurement report before approval.</p></div></div>
+                        </div>
+                        <div class="composer">Write a comment, or @mention a team<svg class="i"><use href="#i-send"/></svg></div>
+                      </div>
+                      <div class="card row">
+                        <div><b class="strong">Fit sample · Round 2</b><div class="sub">Brand approved · QA pending</div></div>
+                        <div class="btns"><span class="mb">Request changes</span><span class="mb p">Approve</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </section></div></div>
+              </div>
+
+              <!-- 03 production tracking -->
+              <div class="view-slide" role="tabpanel" id="v3" aria-labelledby="t3">
+                <div class="mock" role="img" aria-label="Production order tracker showing fabric, cutting, stitching, QA check and dispatch progress with QA results"><div class="app nosb"><section class="mn">
+                  <header class="mn-hd"><div class="crumbs"><span>Production</span><i>/</i><span>PO0417</span></div><div class="right"><span class="ch g dot">On track</span><span class="mb">Export</span></div></header>
+                  <div class="ttl"><h4>Leather Biker Jacket</h4><span class="ch">1,184 pcs</span><span class="ch">Vendor A · Tirupur</span></div>
+                  <div class="pipe">
+                    <div class="st"><h5>Fabric <span class="sq"><svg class="i"><use href="#i-check"/></svg></span></h5><span class="big">100%</span><div class="pb g"><i style="width:100%"></i></div><small>Received &amp; inspected</small></div>
+                    <div class="st"><h5>Cutting <span class="sq"><svg class="i"><use href="#i-check"/></svg></span></h5><span class="big">100%</span><div class="pb g"><i style="width:100%"></i></div><small>1,184 / 1,184 pcs</small></div>
+                    <div class="st cur"><h5>Stitching <span class="ch b mini">Live</span></h5><span class="big">64.9%</span><div class="pb"><i style="width:64.9%"></i></div><small>768 / 1,184 pcs</small></div>
+                    <div class="st"><h5>QA Check <span class="ch a mini">Started</span></h5><span class="big">12.2%</span><div class="pb a"><i style="width:12.2%"></i></div><small>144 / 1,184 pcs</small></div>
+                    <div class="st pend"><h5>Dispatch</h5><span class="big">0%</span><div class="pb"><i style="width:0"></i></div><small>Scheduled · Apr 14</small></div>
+                  </div>
+                  <div class="g2 eq">
+                    <div class="card"><div class="card-h"><b>Production tracker</b><span class="tabs"><span class="on">Inline</span><span>Final</span></span></div>
+                      <div class="chk">
+                        <div class="row"><span class="sq"><svg class="i"><use href="#i-check"/></svg></span><div><b>Measurement</b><small>Within tolerance on all sampled pieces</small></div><span class="ch g">Pass</span></div>
+                        <div class="row"><span class="sq a"><svg class="i"><use href="#i-alert"/></svg></span><div><b>Workmanship</b><small>2 minor defects logged, rework assigned</small></div><span class="ch a">Review</span></div>
+                        <div class="row"><span class="sq"><svg class="i"><use href="#i-check"/></svg></span><div><b>Color</b><small>Matches approved shade</small></div><span class="ch g">Pass</span></div>
+                        <div class="row"><span class="sq n"><svg class="i"><use href="#i-clock"/></svg></span><div><b>Packaging</b><small>Pending final QA</small></div><span class="ch">Pending</span></div>
+                      </div></div>
+                    <div class="card"><div class="card-h"><b>QA tracker</b><span>AW26 · all styles</span></div>
+                      <div class="kpis"><div class="kpi"><small>Styles</small><b>24</b><em>in tracking</em></div><div class="kpi"><small>Approved</small><b>96%</b><em>approved on first check</em></div></div>
+                      <div class="qa-foot"><div><span>Open QA tasks</span><b>3</b></div><div class="pb g"><i style="width:96%"></i></div></div>
+                    </div>
+                  </div>
+                </section></div></div>
+              </div>
+
+              <!-- 04 vendors -->
+              <div class="view-slide" role="tabpanel" id="v4" aria-labelledby="t4">
+                <div class="mock" role="img" aria-label="Vendor list with statuses, an invite vendor form and a vendor scorecard"><div class="app nosb"><section class="mn">
+                  <header class="mn-hd"><div class="crumbs"><span>Vendors</span></div><div class="right"><span class="mb"><svg class="i"><use href="#i-search"/></svg>Search</span><span class="mb p"><svg class="i"><use href="#i-plus"/></svg>Add vendor</span></div></header>
+                  <div class="g2 wide">
+                    <div class="card"><div class="card-h"><b>Approved vendors</b><span>6 vendors</span></div>
+                      <table class="tbl"><thead><tr><th>Vendor</th><th>Location</th><th class="num">Open POs</th><th class="num">On time</th><th>Status</th></tr></thead><tbody>
+                        <tr><td><b>Vendor A</b></td><td>Tirupur</td><td class="num">4</td><td class="num">93.6%</td><td><span class="ch g dot">Active</span></td></tr>
+                        <tr><td><b>Vendor B</b></td><td>Hyderabad</td><td class="num">3</td><td class="num">90.8%</td><td><span class="ch g dot">Active</span></td></tr>
+                        <tr><td><b>Vendor C</b></td><td>Bengaluru</td><td class="num">2</td><td class="num">87.9%</td><td><span class="ch g dot">Active</span></td></tr>
+                        <tr><td><b>Vendor D</b></td><td>Noida</td><td class="num">1</td><td class="num">96.8%</td><td><span class="ch g dot">Active</span></td></tr>
+                        <tr><td><b>Vendor E</b></td><td>Dhaka</td><td class="num">0</td><td class="num">n/a</td><td><span class="ch a dot">Onboarding</span></td></tr>
+                        <tr><td><b>Vendor F</b></td><td>Colombo</td><td class="num">0</td><td class="num">n/a</td><td><span class="ch dot">Invited</span></td></tr>
+                      </tbody></table></div>
+                    <div class="stack">
+                      <div class="card"><div class="card-h"><b>Invite vendor</b></div>
+                        <div class="form">
+                          <div class="fl">Work email<div class="field">vendor@example.com</div></div>
+                          <div class="fl">Access<div class="tight"><div class="cbx"><i><svg class="i"><use href="#i-check"/></svg></i>Tech packs &amp; BOM</div><div class="cbx"><i><svg class="i"><use href="#i-check"/></svg></i>Samples</div><div class="cbx"><i><svg class="i"><use href="#i-check"/></svg></i>Production orders</div><div class="cbx"><i class="off"></i>Costing</div></div></div>
+                          <span class="mb p center"><svg class="i"><use href="#i-send"/></svg>Send invite</span>
+                        </div></div>
+                      <div class="card"><div class="card-h"><b>Vendor A · scorecard</b></div>
+                        <div class="score">
+                          <div class="r"><span>Quality</span><div class="pb g"><i style="width:91.6%"></i></div><span>91.6</span></div>
+                          <div class="r"><span>Delivery</span><div class="pb g"><i style="width:94.3%"></i></div><span>94.3</span></div>
+                          <div class="r"><span>Response</span><div class="pb"><i style="width:80.7%"></i></div><span>80.7</span></div>
+                        </div></div>
+                    </div>
+                  </div>
+                </section></div></div>
+              </div>
+
+              <!-- 05 AI -->
+              <div class="view-slide" role="tabpanel" id="v5" aria-labelledby="t5">
+                <div class="mock" role="img" aria-label="AI extraction turning a tech pack PDF into a structured measurement table and flagging a spec mismatch"><div class="app nosb"><section class="mn">
+                  <header class="mn-hd"><div class="crumbs"><span>Tech packs</span><i>/</i><span>Import</span></div><div class="right"><span class="ch b"><svg class="i sm"><use href="#i-sparkles"/></svg>AI extraction</span></div></header>
+                  <div class="ai-grid">
+                    <div class="pdf"><div class="ph"><span>TECH PACK · JKT4821</span><span>PDF · p.3</span></div>
+                      <div class="ln w72"></div><div class="ln w54"></div>
+                      <div class="hl">A  Chest width ........ 52.0 ±0.5</div>
+                      <div class="hl">B  Body length ....... 68.5 ±1.0</div>
+                      <div class="hl">C  Shoulder width .... 45.5 ±0.5</div>
+                      <div class="hl">D  Sleeve length ..... 63.0 ±0.7</div>
+                      <div class="ln w80"></div><div class="ln w46"></div><div class="ln w64"></div>
+                      <i class="scan"></i></div>
+                    <div class="conv"><span class="circ"><svg class="i lg"><use href="#i-arrow"/></svg></span>Techpack<br>PDF to Excel</div>
+                    <div class="stack">
+                      <div class="card"><div class="card-h"><b>Extracted measurements</b><span class="ch g">38 found</span></div>
+                        <table class="tbl"><thead><tr><th>POM</th><th>Description</th><th class="num">Spec</th><th class="num">Tol</th><th>Conf.</th></tr></thead><tbody>
+                          <tr><td class="k">A</td><td>Chest width</td><td class="num">52.0</td><td class="num">±0.5</td><td><span class="ch g">99%</span></td></tr>
+                          <tr><td class="k">B</td><td>Body length</td><td class="num">68.5</td><td class="num">±1.0</td><td><span class="ch g">98%</span></td></tr>
+                          <tr><td class="k">C</td><td>Shoulder width</td><td class="num">45.5</td><td class="num">±0.5</td><td><span class="ch g">97%</span></td></tr>
+                          <tr class="flag"><td class="k">D</td><td>Sleeve length</td><td class="num">63.0</td><td class="num">±0.7</td><td><span class="ch a">Review</span></td></tr>
+                        </tbody></table></div>
+                      <div class="alert r"><svg class="i"><use href="#i-alert"/></svg><div><b>Spec mismatch detected</b>Sleeve length 63.0 cm in the PDF differs from 62.0 cm in the BOM sheet.</div></div>
+                    </div>
+                  </div>
+                </section></div></div>
+              </div>
+
+            </div>
+            <div class="view-cap"><span><b id="capName">Smart techpack management</b></span><span>Interface shown with sample data</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ UNIFIED PLATFORM ═════════ -->
+<section class="section paper" id="unified">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow y"><b>Unified Platform</b></span>
+      <h2 class="display">All communication, tasks &amp; data in one place.</h2>
+      <p class="lead">Always current. Always in sync. Every role works from the same source of truth, so a change made by one team is visible to all.</p>
+    </div>
+    <div class="rv">
+      <svg class="uni-svg" viewBox="0 0 1000 440" role="img" aria-label="Brand, design, fit, sourcing, vendor and QA teams all connect to one Modozo workspace, which produces dashboards, alerts, an audit trail and exports.">
+        <g fill="none" stroke-width="2" opacity=".85"><path class="dash-flow" stroke="#347bbb" d="M232 43C310 43 310 100 388 100"/><path class="dash-flow" stroke="#fdd14a" d="M232 109C310 109 310 150 388 150"/><path class="dash-flow" stroke="#dd2e1d" d="M232 175C310 175 310 200 388 200"/><path class="dash-flow" stroke="#347bbb" d="M232 241C310 241 310 250 388 250"/><path class="dash-flow" stroke="#fdd14a" d="M232 307C310 307 310 300 388 300"/><path class="dash-flow" stroke="#dd2e1d" d="M232 373C310 373 310 350 388 350"/><path class="dash-flow" stroke="#347bbb" d="M612 110C690 110 690 65 768 65"/><path class="dash-flow" stroke="#dd2e1d" d="M612 180C690 180 690 155 768 155"/><path class="dash-flow" stroke="#fdd14a" d="M612 250C690 250 690 245 768 245"/><path class="dash-flow" stroke="#347bbb" d="M612 315C690 315 690 335 768 335"/></g>
+        <g font-size="16" font-weight="600" fill="#181818"><g><rect x="30" y="20" width="202" height="46" rx="12" fill="#fff" stroke="#e4e0d6"/><rect x="46" y="31" width="24" height="24" rx="8" fill="#347bbb"/><text x="58" y="44" font-size="11" font-weight="600" fill="#fff" text-anchor="middle" dominant-baseline="central">BR</text><text x="82" y="44" dominant-baseline="central">Brand</text></g><g><rect x="30" y="86" width="202" height="46" rx="12" fill="#fff" stroke="#e4e0d6"/><rect x="46" y="97" width="24" height="24" rx="8" fill="#fdd14a"/><text x="58" y="110" font-size="11" font-weight="600" fill="#181818" text-anchor="middle" dominant-baseline="central">DS</text><text x="82" y="110" dominant-baseline="central">Design</text></g><g><rect x="30" y="152" width="202" height="46" rx="12" fill="#fff" stroke="#e4e0d6"/><rect x="46" y="163" width="24" height="24" rx="8" fill="#dd2e1d"/><text x="58" y="176" font-size="11" font-weight="600" fill="#fff" text-anchor="middle" dominant-baseline="central">FT</text><text x="82" y="176" dominant-baseline="central">Fit</text></g><g><rect x="30" y="218" width="202" height="46" rx="12" fill="#fff" stroke="#e4e0d6"/><rect x="46" y="229" width="24" height="24" rx="8" fill="#347bbb"/><text x="58" y="242" font-size="11" font-weight="600" fill="#fff" text-anchor="middle" dominant-baseline="central">SR</text><text x="82" y="242" dominant-baseline="central">Sourcing</text></g><g><rect x="30" y="284" width="202" height="46" rx="12" fill="#fff" stroke="#e4e0d6"/><rect x="46" y="295" width="24" height="24" rx="8" fill="#fdd14a"/><text x="58" y="308" font-size="11" font-weight="600" fill="#181818" text-anchor="middle" dominant-baseline="central">VN</text><text x="82" y="308" dominant-baseline="central">Vendor</text></g><g><rect x="30" y="350" width="202" height="46" rx="12" fill="#fff" stroke="#e4e0d6"/><rect x="46" y="361" width="24" height="24" rx="8" fill="#dd2e1d"/><text x="58" y="374" font-size="11" font-weight="600" fill="#fff" text-anchor="middle" dominant-baseline="central">QA</text><text x="82" y="374" dominant-baseline="central">QA</text></g></g>
+        <rect x="388" y="36" width="224" height="368" rx="16" fill="#181818"/>
+        <image href="public/logo-m-light.png" x="402" y="52" width="38" height="35"/>
+        <text x="450" y="76" fill="#fff" font-size="15.5" font-weight="600">Modozo workspace</text>
+        <text x="404" y="112" fill="#a7a296" font-size="11" font-family="Geist, sans-serif">Single source of truth</text>
+        <rect x="402" y="128" width="196" height="40" rx="8" fill="#272727"/><text x="418" y="148" dominant-baseline="central" fill="#f3f1eb" font-size="14">Tech packs and BOM</text><rect x="402" y="178" width="196" height="40" rx="8" fill="#272727"/><text x="418" y="198" dominant-baseline="central" fill="#f3f1eb" font-size="14">Comments and tasks</text><rect x="402" y="228" width="196" height="40" rx="8" fill="#272727"/><text x="418" y="248" dominant-baseline="central" fill="#f3f1eb" font-size="14">Samples and approvals</text><rect x="402" y="278" width="196" height="40" rx="8" fill="#272727"/><text x="418" y="298" dominant-baseline="central" fill="#f3f1eb" font-size="14">Production tracking</text><rect x="402" y="328" width="196" height="40" rx="8" fill="#347bbb"/><text x="418" y="348" dominant-baseline="central" fill="#f3f1eb" font-size="14">Vendor workspaces</text>
+        <g font-size="16" font-weight="600" fill="#181818"><g><rect x="768" y="42" width="202" height="46" rx="12" fill="#fff" stroke="#e4e0d6"/><rect x="784" y="61" width="8" height="8" rx="2" fill="#347bbb"/><text x="804" y="66" dominant-baseline="central">Dashboards</text></g><g><rect x="768" y="132" width="202" height="46" rx="12" fill="#fff" stroke="#e4e0d6"/><rect x="784" y="151" width="8" height="8" rx="2" fill="#dd2e1d"/><text x="804" y="156" dominant-baseline="central">Alerts and approvals</text></g><g><rect x="768" y="222" width="202" height="46" rx="12" fill="#fff" stroke="#e4e0d6"/><rect x="784" y="241" width="8" height="8" rx="2" fill="#fdd14a"/><text x="804" y="246" dominant-baseline="central">Audit trail</text></g><g><rect x="768" y="312" width="202" height="46" rx="12" fill="#fff" stroke="#e4e0d6"/><rect x="784" y="331" width="8" height="8" rx="2" fill="#347bbb"/><text x="804" y="336" dominant-baseline="central">PDF and Excel</text></g></g>
+      </svg>
+      <div class="uni-list">
+        <div class="u-box"><b>Teams</b>Brand, design, fit, sourcing, vendor and QA</div>
+        <div class="u-box u-dark"><b>Modozo workspace</b>Tech packs and BOM, comments and tasks, samples and approvals, production tracking, vendor workspaces</div>
+        <div class="u-box"><b>Outputs</b>Dashboards, alerts and approvals, audit trail, PDF and Excel</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ COMPARE ═════════ -->
+<section class="section" id="compare">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow r"><b>03</b> Compare</span>
+      <h2>Replace disconnected tools with one system of record.</h2>
+      <p class="lead">See what changes when product development moves out of email, chat and spreadsheets.</p>
+    </div>
+    <div class="cmp rv" role="table" aria-label="Comparison between spreadsheets, email and chat versus Modozo">
+      <div class="cmp-row cmp-h" role="row"><div role="columnheader">Capability</div><div class="them" role="columnheader">Spreadsheets, email &amp; chat</div><div class="us" role="columnheader"><img src="public/logo-word-light.png" alt="Modozo" width="107" height="15"></div></div>
+      <div class="cmp-row" role="row"><div class="k" role="cell">Tech pack storage</div><div class="them" role="cell"><svg class="i"><use href="#i-x"/></svg>Files scattered across drives and inboxes</div><div class="us" role="cell"><svg class="i"><use href="#i-check"/></svg>One structured, versioned record per style</div></div>
+      <div class="cmp-row" role="row"><div class="k" role="cell">Version control</div><div class="them" role="cell"><svg class="i"><use href="#i-x"/></svg>Manual file names such as "final_v2 (1)"</div><div class="us" role="cell"><svg class="i"><use href="#i-check"/></svg>Automatic version history with tracked changes</div></div>
+      <div class="cmp-row" role="row"><div class="k" role="cell">Approvals</div><div class="them" role="cell"><svg class="i"><use href="#i-x"/></svg>Chased by email, with no audit trail</div><div class="us" role="cell"><svg class="i"><use href="#i-check"/></svg>Assigned, dated and recorded on the style</div></div>
+      <div class="cmp-row" role="row"><div class="k" role="cell">Vendor communication</div><div class="them" role="cell"><svg class="i"><use href="#i-x"/></svg>Separate chat groups for every vendor</div><div class="us" role="cell"><svg class="i"><use href="#i-check"/></svg>Threaded comments in a shared vendor workspace</div></div>
+      <div class="cmp-row" role="row"><div class="k" role="cell">Production visibility</div><div class="them" role="cell"><svg class="i"><use href="#i-x"/></svg>Status requested by phone or message</div><div class="us" role="cell"><svg class="i"><use href="#i-check"/></svg>Live stage tracking from fabric to dispatch</div></div>
+      <div class="cmp-row" role="row"><div class="k" role="cell">Reporting</div><div class="them" role="cell"><svg class="i"><use href="#i-x"/></svg>Compiled by hand every week</div><div class="us" role="cell"><svg class="i"><use href="#i-check"/></svg>Dashboards built from live data</div></div>
+      <div class="cmp-row" role="row"><div class="k" role="cell">Access control</div><div class="them" role="cell"><svg class="i"><use href="#i-x"/></svg>Whole files shared outside the company</div><div class="us" role="cell"><svg class="i"><use href="#i-check"/></svg>Access set by role for brand, vendor and QA</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ 04 WORKFLOW ═════════ -->
+<section class="section paper" id="workflow">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow y"><b>04</b> How Modozo works</span>
+      <h2>Your apparel's full journey, from sketch to dispatch, on one operating system.</h2>
+    </div>
+    <div class="wf rv">
+      <div class="steps" role="tablist" aria-label="How Modozo works" id="steps">
+        <button class="step" role="tab" aria-selected="true" data-i="0"><span class="n">01</span><div><h3>Tech Packs</h3><div class="more"><p>Create Line Sheets &amp; Tech Packs. Upload designs, specifications, BOMs, and references.</p></div></div></button>
+        <button class="step" role="tab" aria-selected="false" data-i="1" tabindex="-1"><span class="n">02</span><div><h3>Collaborate</h3><div class="more"><p>Share styles with internal teams and vendors. Comment, assign tasks and approve in context.</p></div></div></button>
+        <button class="step" role="tab" aria-selected="false" data-i="2" tabindex="-1"><span class="n">03</span><div><h3>Sampling</h3><div class="more"><p>Request, track and approve every sample round against the specification.</p></div></div></button>
+        <button class="step" role="tab" aria-selected="false" data-i="3" tabindex="-1"><span class="n">04</span><div><h3>Analytics</h3><div class="more"><p>Dashboards across styles, approvals and production status for every season.</p></div></div></button>
+      </div>
+      <div class="wf-vis" id="wfVis">
+        <img class="on" src="public/img/studio-desk.webp" width="1600" height="900" alt="Designer working at a desk next to a dress form and pinned sketches" loading="lazy" decoding="async">
+        <img src="public/img/studio-team.webp" width="1600" height="900" alt="Two designers reviewing plans together in a fashion studio" loading="lazy" decoding="async">
+        <img src="public/img/leather-trace.webp" width="1600" height="1067" alt="Hands tracing a paper pattern onto leather" loading="lazy" decoding="async">
+        <img src="public/img/factory-floor.webp" width="1800" height="1200" alt="Wide view of a garment factory floor with rows of workers" loading="lazy" decoding="async">
+        <div class="wf-cap"><div><span class="t" id="wfTag">Step 01 · Linesheet to Tech Pack</span><b id="wfTitle">Specifications, BOMs and references in one place</b></div></div>
+      </div>
+    </div>
+
+    <div class="rail-h rv">
+      <div class="sec-head">
+        <span class="eyebrow r"><b>Production</b> Supply chain stages</span>
+        <h2 class="h4">Visibility from fabric to dispatch.</h2>
+      </div>
+      <p>Every purchase order moves through the same five stages, and every stage reports back to the same record.</p>
+    </div>
+    <div class="rail">
+      <article class="r-card rv"><figure><img src="public/img/stage-fabric.webp" width="800" height="533" alt="Rolls of colourful fabric stacked on a shelf" loading="lazy" decoding="async"><span class="tag">01 Fabric</span></figure><div class="txt"><h3>Fabric</h3><p>Receipt, inspection and shade approval logged against the order.</p></div></article>
+      <article class="r-card rv d1"><figure><img src="public/img/stage-cutting.webp" width="800" height="533" alt="Workers laying out fabric at a cutting table in a garment factory" loading="lazy" decoding="async"><span class="tag">02 Cutting</span></figure><div class="txt"><h3>Cutting</h3><p>Cut quantities reconciled against the approved plan.</p></div></article>
+      <article class="r-card rv d2"><figure><img src="public/img/stage-stitching.webp" width="800" height="533" alt="Operator stitching garments at an industrial sewing machine" loading="lazy" decoding="async"><span class="tag">03 Stitching</span></figure><div class="txt"><h3>Stitching</h3><p>Line progress and bundle status visible without a phone call.</p></div></article>
+      <article class="r-card rv d3"><figure><img src="public/img/stage-qa.webp" width="800" height="526" alt="Inspector checking fabric quality on a factory floor" loading="lazy" decoding="async"><span class="tag">04 QA check</span></figure><div class="txt"><h3>QA check</h3><p>Measurement, workmanship, colour and packaging inspections recorded.</p></div></article>
+      <article class="r-card rv d3"><figure><img src="public/img/stage-dispatch.webp" width="800" height="533" alt="Worker packing finished garments ready for dispatch" loading="lazy" decoding="async"><span class="tag">05 Dispatch</span></figure><div class="txt"><h3>Dispatch</h3><p>Packing and shipment status shared with the brand in real time.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ 05 IMPACT ═════════ -->
+<section class="section" id="impact">
+  <div class="wrap imp">
+    <div class="sec-head rv">
+      <span class="eyebrow"><b>05</b> Impact</span>
+      <h2 class="display">Why fashion teams choose Modozo</h2>
+      <p class="lead">Replace disconnected tools with one operating system for product development, sourcing and production.</p>
+    </div>
+
+    <div class="rv">
+      <div class="view panel">
+        <div class="mock" role="img" aria-label="Analytics dashboard with style and approval totals, styles by stage and approval rate"><div class="app nosb big"><section class="mn">
+          <header class="mn-hd"><div class="crumbs"><span>Analytics</span><i>/</i><span>AW26 overview</span></div><div class="right"><span class="ch">All vendors</span><span class="ch b">Season AW26</span></div></header>
+          <div class="kgrid">
+            <div class="kpi"><small>Styles</small><b>24</b><em>in the season</em></div>
+            <div class="kpi"><small>Approved</small><b>96%</b><em>approved on first check</em></div>
+            <div class="kpi"><small>In production</small><b>7</b><em>across 4 vendors</em></div>
+            <div class="kpi"><small>Open approvals</small><b>3</b><em class="warn">2 due this week</em></div>
+          </div>
+          <div class="g2 dash">
+            <div class="card"><div class="card-h"><b>Styles by stage</b><span>24 styles</span></div>
+              <div class="bars">
+                <div><span class="bar"><i style="height:57%"></i></span><b>4</b>Concept</div>
+                <div><span class="bar"><i style="height:86%"></i></span><b>6</b>Tech pack</div>
+                <div><span class="bar"><i style="height:71%"></i></span><b>5</b>Sampling</div>
+                <div><span class="bar"><i style="height:100%"></i></span><b>7</b>Production</div>
+                <div><span class="bar"><i style="height:29%"></i></span><b>2</b>Dispatch</div>
+              </div></div>
+            <div class="card"><div class="card-h"><b>Approval rate</b><span>QA tracker</span></div>
+              <div class="donut"><svg viewBox="0 0 36 36" aria-hidden="true"><circle cx="18" cy="18" r="15.9155" fill="none" stroke="#fdd14a" stroke-width="4"/><circle cx="18" cy="18" r="15.9155" fill="none" stroke="#347bbb" stroke-width="4" stroke-dasharray="96 4"/></svg><b>96%</b></div>
+              <div class="legend center"><span><i class="c-blue"></i>Approved</span><span><i class="c-yellow"></i>Pending</span></div></div>
+          </div>
+        </section></div></div>
+        <div class="view-cap"><span>Interface shown with sample data</span></div>
+      </div>
+    </div>
+
+    <div class="outs rv">
+      <div class="out"><h3><span class="ic"><svg class="i"><use href="#i-clock"/></svg></span>Faster approvals</h3><p>Samples and tech packs reach the right person with a clear owner and deadline, so decisions stop waiting in inboxes.</p></div>
+      <div class="out"><h3><span class="ic"><svg class="i"><use href="#i-shield"/></svg></span>Fewer errors</h3><p>One versioned record replaces conflicting files, so brand, vendor and QA build to the same specification.</p></div>
+      <div class="out"><h3><span class="ic"><svg class="i"><use href="#i-activity"/></svg></span>Production control</h3><p>Visibility at each stage, from fabric to dispatch, lets teams act on delays while there is still time to recover.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════════ FAQ ═════════ -->
+<section class="section paper" id="faq">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow"><b>FAQ</b></span>
+      <h2>Frequently asked questions</h2>
+      <p class="lead">Everything you need to know about Modozo, how it works, and how it helps fashion teams streamline product development and production.</p>
+    </div>
+    <dl class="faq rv">
+      <div class="faq-row"><dt>What is Modozo?</dt><dd>Modozo is a fashion product lifecycle management platform. It brings tech packs, BOMs, samples, approvals, vendor communication and production tracking into one workspace, so brands and manufacturers work from the same current information.</dd></div>
+      <div class="faq-row"><dt>How does Modozo reduce manual work?</dt><dd>Structured tech packs replace scattered files, and updates, approvals and comments are recorded against the style. Tools powered by AI, such as Techpack PDF to Excel, remove retyping, so teams spend less time copying data between documents and chasing status.</dd></div>
+      <div class="faq-row"><dt>Can I collaborate with vendors?</dt><dd>Yes. Invite vendors into a shared workspace where they can access the tech packs, samples and orders you choose, comment in real time and confirm costs, without exchanging files over email or chat.</dd></div>
+      <div class="faq-row"><dt>Does Modozo support sample and production tracking?</dt><dd>Yes. Every sample round is tracked against its specification, and production orders are followed through fabric, cutting, stitching, QA check and dispatch, with measurement, workmanship, colour and packaging checks recorded.</dd></div>
+      <div class="faq-row"><dt>How does Modozo keep everyone aligned during product development?</dt><dd>Every team works from a single versioned record per style. Changes, comments and approvals update for all roles, including brand, design, fit, sourcing, vendor and QA, so nobody builds from an outdated file.</dd></div>
+      <div class="faq-row"><dt>Is my product data secure?</dt><dd>Product data lives in a central workspace with access set by role, so each team member and vendor sees only the styles and information shared with them. For details on hosting and compliance, contact the Modozo team.</dd></div>
+      <div class="faq-row"><dt>Who is Modozo built for?</dt><dd>Apparel brands, manufacturers and sourcing teams that manage products from concept through production and delivery, together with the design, fit, sourcing, vendor and QA teams who work on them.</dd></div>
+    </dl>
+    <p class="fine"><a class="link" href="mailto:contact@modozo.fashion">Ask the team <svg class="i"><use href="#i-arrow"/></svg></a></p>
+  </div>
+</section>
+
+<!-- ═════════ CTA ═════════ -->
+<section class="cta" id="cta">
+  <img class="bg" src="public/img/factory-sort.webp" width="1600" height="1067" alt="" loading="lazy" decoding="async">
+  <div class="wrap cta-grid">
+    <div class="cta-copy rv">
+      <span class="dots3 lg" aria-hidden="true"><b></b><b></b><b></b></span>
+      <h2 class="display">The future of fashion starts here.</h2>
+      <p>Join the brands and manufacturers running on the Fashion Operating System. Share a few details and the Modozo team will get in touch to arrange your demo.</p>
+      <ul class="cta-contact">
+        <li><svg class="i" aria-hidden="true"><use href="#i-mail"/></svg><a href="mailto:contact@modozo.fashion">contact@modozo.fashion</a></li>
+        <li><svg class="i" aria-hidden="true"><use href="#i-phone"/></svg><a href="tel:+919980924244">+91 9980924244</a></li>
+      </ul>
+    </div>
+    <div class="demo-wrap rv">
+      <form class="demo" id="demoForm" action="mailto:contact@modozo.fashion" method="post" enctype="text/plain" data-endpoint="" novalidate>
+        <h3 class="title-1">Book a demo</h3>
+        <div class="fld"><label for="f-name">Full name</label><input id="f-name" name="name" type="text" autocomplete="name" required aria-describedby="e-name"><span class="err" id="e-name" role="alert"></span></div>
+        <div class="fld"><label for="f-email">Work email</label><input id="f-email" name="email" type="email" inputmode="email" autocomplete="email" required aria-describedby="e-email"><span class="err" id="e-email" role="alert"></span></div>
+        <div class="fld"><label for="f-company">Company</label><input id="f-company" name="company" type="text" autocomplete="organization" required aria-describedby="e-company"><span class="err" id="e-company" role="alert"></span></div>
+        <div class="fld"><label for="f-message">What would you like to see? <small>Optional</small></label><textarea id="f-message" name="message" rows="3"></textarea></div>
+        <button class="btn btn-primary" type="submit">Book a demo <svg class="i" aria-hidden="true"><use href="#i-arrow"/></svg></button>
+        <div class="form-status" id="demoStatus" role="status" aria-live="polite"></div>
+      </form>
+      <div class="demo demo-ok" id="demoOk" tabindex="-1" hidden>
+        <span class="ok-ic" aria-hidden="true"><svg class="i"><use href="#i-check"/></svg></span>
+        <h3 class="title-1" id="demoOkTitle"></h3>
+        <div class="ok-text" id="demoOkText"></div>
+        <button class="link" type="button" id="demoAgain">Edit your details</button>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ═════════ FOOTER ═════════ -->
+<footer class="ftr">
+  <div class="tribar" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="wrap">
+    <div class="ftr-top">
+      <div>
+        <a class="logo" href="#top" aria-label="Modozo home"><img src="public/logo-m-light.png" alt="" width="35" height="32"><img src="public/logo-word-light.png" alt="Modozo" width="102" height="14"></a>
+        <p class="t">The Fashion Operating System. Connecting product data, teams and manufacturers from tech pack to dispatch.</p>
+      </div>
+      <nav aria-label="Footer"><h4>Explore</h4><ul><li><a href="#problem">Problem</a></li><li><a href="#platform">Platform</a></li><li><a href="#compare">Compare</a></li><li><a href="#workflow">Workflow</a></li><li><a href="#impact">Impact</a></li><li><a href="#faq">FAQ</a></li></ul></nav>
+      <div><h4>Hyderabad, India</h4>
+        <address>
+          <div><svg class="i"><use href="#i-pin"/></svg><span>4th Floor, Sanali Spazio, Inorbit Mall Rd, Madhapur, Hyderabad, Telangana, 500081</span></div>
+          <div><svg class="i"><use href="#i-mail"/></svg><a href="mailto:contact@modozo.fashion">contact@modozo.fashion</a></div>
+          <div><svg class="i"><use href="#i-phone"/></svg><a href="tel:+919980924244">+91 9980924244</a></div>
+        </address>
+      </div>
+    </div>
+    <div class="ftr-bot"><span>&copy; <span id="year">2026</span> Modozo. All rights reserved. Photography via Unsplash contributors.</span>
+      <nav aria-label="Legal"><a href="https://www.modozo.fashion/privacy-policy">Privacy policy</a><a href="https://www.modozo.fashion/terms-of-service">Terms of service</a><a href="https://www.modozo.fashion/about-us">About us</a><a href="https://www.modozo.fashion/help-center">Help center</a><a href="https://www.linkedin.com/company/modozo/" rel="noopener noreferrer">LinkedIn</a></nav>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js?v=14" defer></script>
+<script type="module" src="js/hero-film.js?v=14"></script>
+<script src="js/mascot.js?v=1" defer></script>
+<script src="js/assistant.js?v=4" defer></script>
+</body>
+</html>
